@@ -6,7 +6,7 @@ links:
       download: false
     - name: Projets
       link: /projets
-      new_window: true
+      new_window: false
       download: false
     - name: Blogue
       link: /blogue/
@@ -15,7 +15,7 @@ links:
   -
     - name: Imprint
       link: "#"
-      new_window: true
+      new_window: false
       download: false
     - name: Privacy Policy
       link: /privacy
