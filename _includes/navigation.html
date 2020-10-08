@@ -6,21 +6,27 @@
 			{% assign class = class | append: " highlight" %}
 		{% endif %}
 
-		{% if page.url contains link.link %}
-			{% assign class = class | append: " active" %}
+		{% if link.link == "/" %}
+			{% if page.url == "/" %}
+				{% assign class = class | append: " active" %}
+			{% endif %}
+		{% else %}
+		    {% if page.url contains link.link %}
+				{% assign class = class | append: " active" %}
+			{% endif %}
 		{% endif %}
 		{% if link.sublinks %}
 			<div class="dropdown">
 				<a class="nav">{{ link.name }}</a>
 				<div class="dropdown-content">
 					{% for sublink in link.sublinks %}
-					<a href="{{ sublink.link }}">{{ sublink.name }}</a>
+					<a {% if sublink.link %}href="{{ sublink.link }}"{% endif %}>{{ sublink.name }}</a>
 					{% endfor %}
 				</div>
 			</div>
 		{% else %}
 			{% assign extra_class = link.extra_class %}
-			<a href="{% include relative-src.html src=link.link %}" class="{{ class }} {{ extra_class }}" {% if link.new_window %}target="_blank"{% endif %} {% if link.onclick %}onclick={{link.onclick}}{% endif %}>{{ link.name }}</a>
+			<a {% if link.link %}href="{{ link.link | relative_url}}"{% endif %} class="{{ class }} {{ extra_class }}" {% if link.new_window %}target="_blank"{% endif %} {% if link.onclick %}onclick={{link.onclick}}{% endif %}>{{ link.name }}</a>
 		{% endif %}
 	{% endfor %}
 </nav>

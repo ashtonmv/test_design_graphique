@@ -419,7 +419,8 @@ div.highlight, figure.highlight {
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #f1f1f1;
+	background-color: white;
+	border-radius: 8px;
 	min-width: 160px;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;
@@ -433,14 +434,14 @@ div.highlight, figure.highlight {
 
 /* Links inside the dropdown */
 .dropdown-content a {
-	color: black;
+	color: $purple;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content a:hover {color: $pink;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block; z-index: 3000;
