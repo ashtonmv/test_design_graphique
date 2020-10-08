@@ -186,10 +186,6 @@ document.addEventListener('juniper', event => {
 
 <script>
 
-    window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-    }
-
     $( document ).ready(function() {
         Typer = new TxtType($("#condaInstall"), "", "{{ site.installation }}");
         Typer.type();

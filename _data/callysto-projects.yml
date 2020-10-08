@@ -1,4 +1,4 @@
 -
   name: Example
-  image_path: /images/particular.png
+  image: particular.png
   link: https://www.michael-ashton.com/particular

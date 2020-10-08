@@ -6,7 +6,7 @@ github: ashtonmv/callysto
 alert:
 url: michael-ashton.com/callysto
 baseurl:
-installation: Lorem ipsum dolor.
+installation: Lorem ipsum dolor
 
 email: callysto@gmail.com
 formspree: https://formspree.io/callysto@gmail.com

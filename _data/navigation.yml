@@ -1,19 +1,19 @@
 - name: accueil
-  link: /team
+  link: /
   new_window: false
   highlight: false
 
 - name: Services
-  link: "#"
+  link:
   new_window: true
   highlight: false
   sublinks:
     - name: Calfeutrage Portes/Fenêtres
-      link: "#"
+      link:
     - name: Étanchéité de batiment
-      link: "#"
+      link:
     - name: Calfeutrage Roulottes
-      link: "#"
+      link:
 
 - name: Projets
   link: /projets/
@@ -26,13 +26,13 @@
   highlight: false
 
 - name: Contact
-  link: "#"
+  link:
   onclick: "$('.formbutton')[0].click();"
   new_window: false
   highlight: false
 
 - name: Obtenir Une Soumission
-  link: "#"
+  link:
   new_window: false
   highlight: false
   extra_class: nav-outline
