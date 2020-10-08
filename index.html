@@ -20,6 +20,7 @@ description:
 			</div>
 		</div>
 	</div>
+	<div class="button alt" style="margin-top: 20px"><a href="#">Démarrer</a></div>
 	<div id="screenshot" data-aos="fade-up" data-aos-offset="3000">
 		<img src="{{ site.baseurl }}/images/dashboard.png" alt="Screenshot" class="screenshot editable" data-aos="fade-up" data-aos-offset="-300"/>
 	</div>
@@ -27,8 +28,8 @@ description:
 
 <div id="content" class="content" data-aos="fade-up" data-aos-offset="3000">
 
-	<h1 class="center-text page-description">Take your landing page to new heights.</h1>
-	
+	<h1 class="center-text page-description">Mission</h1>
+	<h2 class="center-text" style="margin-top:10px">Je suis passionné par...</h2>
 	{% assign text-left = true %}
 	{% for feature in site.data.features %}
 		{% if text-left %}
@@ -49,7 +50,8 @@ description:
 			</div>
 			<div class="container flex" style="justify-content: center;">
 				<div class="feature" data-aos="fade-up" data-aos-offset="0">
-					{% include {{ feature.snippet }} %}
+					{% capture my_include %}{% include {{ feature.snippet}} %}{% endcapture %}
+					{{ my_include | markdownify }}
 				</div>
 			</div>
 		</section>
@@ -60,40 +62,39 @@ description:
 		{% endif %}
 	{% endfor %}
 
-	<div id="news" class="text-container" style="text-align: center;">
-		<h1>Latest News</h1>
+	<section>
+
+		<div class="container flex no-padding">
+			<div class="text editable">
+				<h2>Prénom Nom</h2>
+				<p>C'est moi, là-bas!</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pharetra justo at nisl hendrerit ornare. Duis facilisis sed orci ut condimentum. Nunc tellus neque, hendrerit bibendum erat in, tempus lacinia neque. Nullam tincidunt, ipsum id faucibus consequat, erat massa ullamcorper dui, in pharetra augue enim dictum nisi. Vestibulum nibh leo, feugiat vitae dui quis, fringilla mollis dui. Phasellus magna risus, finibus eu posuere quis, commodo ut nisl. Nulla facilisi. Phasellus commodo lectus purus, at finibus lectus facilisis luctus. Fusce vulputate vehicula libero, et placerat leo hendrerit at. Duis porta lorem lobortis dui gravida, a sodales nulla mollis.
+				</p>
+			</div>
+			<img style="width: 450px; border-radius: 20px" src="{{ 'images/headshot.png' | relative_url }}"/>
+		</div>
+	</section>
+
+	<div id="news" class="text-container" style="text-align: center; margin-top: 100px;">
+		<h1>Témoignages</h1>
 		<hr>
 	</div>
 	<div class="container flex">
 	{% assign news_icons = "releases, milestones" | split: ', ' %}
 	{% assign i = 1 %}
-	{% for post in site.categories.news limit:3 %}
+	{% for dev in site.data.core-developers limit:3 %}
 		<div class="news-card"
 		{% if i == 1 %} data-aos="fade-right"
 		{% elsif i == 2 %} data-aos="zoom-in"
 		{% elsif i == 3 %} data-aos="fade-left"
 		{% endif %} data-aos-offset="0"
-		{% if news_icons contains post.categories[1] %}
-			style="background-image: url({{ site.baseurl }}/images/news-icon-{{ post.categories[1] }}.png)"
-		{% else %}
-			style="background-image: url({{ site.baseurl }}/images/news-icon-default.png)"
-		{% endif %}
+			style="background-image: url({{ dev.image_path }})"
 			>
-		<h3 style="color: {{ site.colors.main }}">{{ post.date | date: "%b %d, %Y"  }}</h3>
 		<p>
-		<a href="{{ post.url | relative_url }}">
-			{{ post.title }}
-		</a>
+			{{ dev.name }}
 			<div class="post-details">
-				{% for category in post.categories %}
-					{% if category != "news" %}
-						<span class="blog-filter">
-							<a href="{{ site.baseurl }}/news#category={{ category | slugify }}">
-								{{ category }}
-							</a>
-						</span>
-					{% endif %}
-				{% endfor %}
+				{{ dev.testimonial }}
 			</div>
 		</p>
 		</div>
@@ -101,13 +102,13 @@ description:
 	{% endfor %}
 	</div>
 	<section class="bottom-cta">
-		<h2 class="editable">Callysto revolves around <strong>Jupyter</strong>.</h2>
+		<h2 class="editable">Construisons <strong>ensemble</strong> le site web de vos rêves.</h2>
 		<p>
-		<div class="button alt"><a href="https://jupyter.org" target="_blank">Learn more about Jupyter</a></div>
+		<div class="button alt"><a href="https://www.michael-ashton.com" target="_blank">En savoir plus sur moi</a></div>
 		</p>
 	</section>
 </div>
 
+{% include juniper.html %}
 {% include typewrite.html %}
 {% include animate_on_scroll.html %}
-{% include juniper.html %}

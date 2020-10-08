@@ -1,22 +1,24 @@
 -
-    header: Yaml-centered customization
+    header: ...des pratiques de codage propres
     icon: images/feature-icon.png
-    content: <p>Don't get your hands dirty with HTML + css unless you want to.</p>
-        <p>Most of callysto's options can be edited directly in the main <span class="inline">_config.yml</span> file or
-        in Yaml files under <span class="inline">_data</span></p>
+    content: "<p>Je rends mes sites web faciles à éditer pour les autres - ne vous salissez pas les mains avec du HTML + css (sauf si vous le voulez !)</p>
+        <p>Par exemple, la plupart des options de ce site web peuvent être éditées directement dans des fichiers Yaml comme celui-ci:</p>"
     snippet: sample_yaml.md
 
 -
-    header: Responsive, interactive elements
-    icon: images/feature-icon.png
-    content: <p>callysto makes the most of powerful Javascript libraries like
-        <a href="https://michalsnik.github.io/aos/">Animate On Scroll</a> to give your landing page a
-        responsive and modern feel without being cluttered.</p>
+    header: ...une conception web adaptée
+    icon: images/rocket.png
+
+    content: "<p>Je ne parle (évidemment) pas français, mais je parle couramment le javascript. Cela signifie que je peux créer des plugins et des packages personnalisés pour votre site web afin de lui donner une apparence élégante et réactive sans être gadget.</p>"
+
     snippet: sample_javascript.md
 
 -
-    header: Code styling via rouge
-    icon: images/feature-icon.png
-    content: <p>Select a Pygments theme or customize the provided stylesheet yourself to
-        get your code snippets looking and behaving just the way you want them to.</p>
+    header: ...et un puissant soutien en aval
+    icon: images/weight.png
+    content: "<p>Je ne me contente pas de concevoir des logos et des icônes - je construis
+    et a hébergé ce site à partir de la base. Mes compétences complètes font que
+    il est plus facile pour moi de fournir des prestations en amont et de coopérer
+    avec d'autres développeurs de l'équipe.</p><p> Par exemple, essayez de modifier
+    et en exécutant le code (Python) ci-dessous sur un serveur distant que j'ai mis en place.</p>"
     snippet: sample_python.md

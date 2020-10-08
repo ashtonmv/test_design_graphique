@@ -1,13 +1,10 @@
 {% highlight yaml %}
 title: callysto
-github: ashtonmv/callysto
+github: ashtonmv/example_site
 alert: 'I'm here for your cookies!'
-url: michael-ashton.com/callysto
+url: michael-ashton.com/example_site
 baseurl: /
-# google_analytics_key:
-# google_maps_javascript_api_key:
-# disqus_shortname:
 email: callysto@gmail.com
-formspree: https://formspree.io/xrgywnvn
+formspree: https://formspree.io/callysto@gmail.com
 copyright: Michael Ashton
 {% endhighlight %}

@@ -11,40 +11,44 @@
 
     for (var i=0; i<$(".highlight").length; i++) {
         var snippet = $(".highlight")[i];
-        var syntax = "";
 
-        if ($(snippet).attr("class").includes("language")) {
-            var classes = $(snippet).attr("class").split(" ");
-        }
+        if ($(snippet).attr("id") == undefined) {
+            var syntax = "";
 
-        // catches normal code snippets
-        else if ($(snippet).parent().hasClass("highlighter-rouge")) {
-            var classes = $(snippet).parent().attr("class").split(" ");
-        }
+            if ($(snippet).attr("class").includes("language")) {
+                var classes = $(snippet).attr("class").split(" ");
+            }
 
-        // catches the conda install box and any other "manually"
-        // added snippets
-        else if ($(snippet).find("pre").first().find("code").first() != undefined) {
-            var pre = $(snippet).find("pre").first();
-            var code = $(pre).find("code").first();
-            var classes = $(code).attr("class").split(" ");
-            console.log("HERE"+classes);
-        }
+            // catches normal code snippets
+            else if ($(snippet).parent().hasClass("highlighter-rouge")) {
+                var classes = $(snippet).parent().attr("class").split(" ");
+            }
 
-        for (var j=0; j < classes.length; j++) {
-            if (classes[j].includes("language")) {
-                syntax = classes[j].replace("language-", "");
+            // catches the conda install box and any other "manually"
+            // added snippets
+            else if ($(snippet).find("pre").first().find("code").first() != undefined) {
+                var pre = $(snippet).find("pre").first();
+                var code = $(pre).find("code").first();
+                var classes = $(code).attr("class").split(" ");
+                console.log("HERE"+classes);
+            }
+
+            for (var j=0; j < classes.length; j++) {
+                if (classes[j].includes("language")) {
+                    syntax = classes[j].replace("language-", "");
+                }
+            }
+
+            var uniqueId = "tab"+i;
+            $(snippet).prepend("<div class='tab' id='" + uniqueId + "'></div>");
+
+            if (syntax in tabLabels) {
+                $("#"+uniqueId).text(tabLabels[syntax]);
+            } else {
+                $("#"+uniqueId).html("<i class='fas fa-code'></>");
             }
         }
 
-        var uniqueId = "tab"+i;
-        $(snippet).prepend("<div class='tab' id='" + uniqueId + "'></div>");
-
-        if (syntax in tabLabels) {
-            $("#"+uniqueId).text(tabLabels[syntax]);
-        } else {
-            $("#"+uniqueId).html("<i class='fas fa-code'></>");
-        }
     }
 
 </script>

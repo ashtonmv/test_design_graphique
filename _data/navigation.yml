@@ -1,24 +1,38 @@
-- name: Team
+- name: accueil
   link: /team
   new_window: false
   highlight: false
-- name: Sponsors
-  link: /sponsors/
-  new_window: false
-  highlight: false
-- name: Blog
-  link: /blog/
-  new_window: false
-  highlight: false
-- name: Documentation
-  link: https://pyiron.readthedocs.io/en/latest/
+
+- name: Services
+  link: "#"
   new_window: true
   highlight: false
-- name: Getting Started
-  link: /getting-started
+  sublinks:
+    - name: Calfeutrage Portes/Fenêtres
+      link: "#"
+    - name: Étanchéité de batiment
+      link: "#"
+    - name: Calfeutrage Roulottes
+      link: "#"
+
+- name: Projets
+  link: /projets/
   new_window: false
   highlight: false
-- name: News
-  link: /news/
+
+- name: Blogue
+  link: /blogue/
   new_window: false
   highlight: false
+
+- name: Contact
+  link: "#"
+  onclick: "$('.formbutton')[0].click();"
+  new_window: false
+  highlight: false
+
+- name: Obtenir Une Soumission
+  link: "#"
+  new_window: false
+  highlight: false
+  extra_class: nav-outline

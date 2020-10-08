@@ -1,20 +1,20 @@
 links:
   -
-    - name: Getting started
-      link: /getting-started
+    - name: Services
+      link: "#"
       new_window: false
       download: false
-    - name: Documentation
-      link: https://callysto.readthedocs.io/en/latest/
+    - name: Projets
+      link: /projets
       new_window: true
       download: false
-    - name: News
-      link: /news/
+    - name: Blogue
+      link: /blogue/
       new_window: false
       download: false
   -
     - name: Imprint
-      link: https://www.mpie.de/impressum
+      link: "#"
       new_window: true
       download: false
     - name: Privacy Policy
@@ -28,14 +28,14 @@ links:
 
 social:
   -
-    name: Github
-    icon: github-alt
-    link: https://github.com/ashtonmv/callysto
+    name: Twitter
+    icon: twitter
+    link: https://twitter.com
   -
     name: Youtube
     icon: youtube
-    link: https://www.youtube.com/lightroast
+    link: https://www.youtube.com
   -
-    name: Stack Overflow
-    icon: stack-overflow
-    link: https://stackoverflow.com/questions/tagged/callysto
+    name: Facebook
+    icon: facebook
+    link: https://facebook.com

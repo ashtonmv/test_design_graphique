@@ -6,10 +6,10 @@
 # Uncomment and configure your formspree link (don't include https://formspree.io/)
 # to add the formbutton to your site.
 #link: your@email.com
-title: Contact Me
+title: Contactez-nous
 theme: classic
-response: "Thanks for your message! I'll get back to you soon."
-error_message: "Oops! Something went wrong. Please be sure you entered a valid email address."
+response: "Merci pour votre message ! Nous vous recontacterons bientôt."
+error_message: "Oups ! Quelque chose a mal tourné. Veuillez vous assurer que vous avez entré une adresse électronique valide."
 color:
   title: "#ff61a0"
   title-background: white

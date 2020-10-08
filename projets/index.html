@@ -1,0 +1,25 @@
+---
+title: Projets
+description: Je n'ai pas de projets à lister, mais votre page le fera probablement!
+---
+
+<p style="text-align: center;">
+	Vous souhaitez inscrire votre projet ci-dessous ? Il suffit de l'ajouter à _data/callysto-projects.yml!
+</p>
+
+<div class="testimonial">
+	<h2>Projets</h2>
+	<hr>
+	<div class="projects">
+		{% for site in site.data.callysto-projects %}
+			<div class="collaborator-block">
+				<a href="{{ site.link }}" target="_blank">
+					<div class="square-image">
+						<img src="{{ site.image_path }}" alt="{{ site.name }}" class="editable">
+						<h2>{{ site.name }}</h2>
+					</div>
+				</a>
+			</div>
+		{% endfor %}
+	</div>
+</div>

@@ -24,14 +24,12 @@
 		{% endif %}
 	</head>
 	<body>
-		{% if page.url != "/" %}
-			<header>
-				<div class="container max-container no-padding">
-						<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.png" alt="pyiron Logo" width="100" height="100"/></a></div>
-						{% include navigation.html %}
-				</div>
-			</header>
-		{% endif %}
+		<header>
+			<div class="container max-container no-padding">
+				<div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo_no_text.png" alt="Logo" width="100" height="100"/></a></div>
+				{% include navigation.html %}
+			</div>
+		</header>
 
 		{{ content }}
 		<footer id="footer">
