@@ -1,7 +1,6 @@
 links:
   -
     - name: Services
-      link: "#"
       new_window: false
       download: false
     - name: Projets
@@ -13,10 +12,10 @@ links:
       new_window: false
       download: false
   -
-    - name: Mentions légales
+    - name: Juridique
       new_window: false
       download: false
-    - name: Politique de confidentialité
+    - name: Confidentialité
       link: /confidentialite
       new_window: false
       download: false
