@@ -13,16 +13,15 @@ links:
       new_window: false
       download: false
   -
-    - name: Imprint
-      link: "#"
+    - name: Mentions légales
       new_window: false
       download: false
-    - name: Privacy Policy
-      link: /privacy
+    - name: Politique de confidentialité
+      link: /confidentialite
       new_window: false
       download: false
-    - name: License
-      link: /license
+    - name: Licence
+      link: /licence
       new_window: false
       download: false
 

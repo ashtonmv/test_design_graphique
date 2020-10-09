@@ -176,8 +176,8 @@ document.addEventListener('juniper', event => {
             url: "{{ site.data.juniper.url }}",
             repo: "{{ site.data.juniper.repo }}",
             theme: "{{ site.data.juniper.theme }}",
-            useStorage: "{{ site.data.juniper.useStorage }}",
-            isolateCells: "{{ site.data.juniper.isolateCells }}",
+            useStorage: true,
+            isolateCells: false,
             msgLoading: "{{ site.data.juniper.msgLoading }}",
         });
         startKernel(juniper);
